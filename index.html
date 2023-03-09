@@ -1,112 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <title>Joseph's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Links -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./img/Flybot.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/contact.css" />
+  <link rel="stylesheet" href="/css/skillbar.css" />
+  <link rel="stylesheet" href="./css/website-style.css" />
+  <link rel="stylesheet" href="./css/projects.css" />
+  <link rel="stylesheet" href="./css/light-dark-theme.css" />
 </head>
 
 <body>
-    <!-- here's all the main stuff like the header the go back button and the navbar  -->
-    <div class="container">
-    <div id="main">
-        <h1 class="head">Components</h1>
-    </div>
 
-<main class="nav-container" style="height: 1100px;">
-    <nav id="navbar">
-        <ul class="list-categories">
-            <li><a href="./Components/HelloWorld.html">Title</a></li>
-            <li><a href="./Components/Button.html">Button & Alert</a></li>
-            <li><a href="./Components/Checkbox.html">Checkbox</a></li>
-            <li><a href="./Components/Video.html">Video (2Pac)</a></li>
-            <li><a href="">Coming soon...</a></li>
-            <li><a href="">Coming soon...</a></li>
-            <li><a href="">Coming soon...</a>
+         <!-- main navigation -->
+
+  <section class="scroll-tabs" id="tab-home">
+    <section id="front-page">
+      <div class="front-page-background"></div>
+      <div class="front-page container">
+        <div>
+          <h1>Hi! <span></span></h1>
+          <h1>My name is <span></span></h1>
+          <h1>Joseph Fallouh <span></span></h1>
+          <a href="./CV-Joseph" download class="cta">Download CV</a>
+          <label class="switch switch--top" for="themeSwitch">
+            <input type="checkbox" id="themeSwitch" onclick="changeTheme()" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+    <div class="nav-container">
+      <a class="nav-tab" href="#tab-home">Home</a>
+      <a class="nav-tab" href="#tab-about">About</a>
+      <a class="nav-tab" href="#tab-projects">Projects</a>
+      <a class="nav-tab" href="#tab-skills">Skills</a>
+      <a class="nav-tab" href="#tab-contact">Contact</a>
+    </div>
+  </section>
+
+  <!-- Phone Navigation -->
+
+  <section class="phone-scroll-tabs"></section>
+  <nav class="phone-nav-container">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link active" href="#tab-home">
+          <i class="navigation__icon"><img src="./svg/home.svg" alt="Home" /></i>
+          <span class="navigation__text">HOME</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="#tab-about">
+          <i class="navigation__icon"><img src="./svg/book.svg" alt="About me" /></i>
+          <span class="navigation__text">About</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="#tab-projects">
+          <i class="navigation__icon"><img src="./svg/code.svg" alt="Projects" /></i>
+          <span class="navigation__text">Projects</span>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="#tab-skills">
+          <i class="navigation__icon"><img src="./svg/star.svg" alt="Skills" /></i>
+          <span class="navigation__text">Skills</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a class="navigation__link" href="#tab-contact">
+          <i class="navigation__icon"><img src="./svg/mail.svg" alt="Contact" /></i>
+          <span class="navigation__text">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Pages -->
+
+  <main class="slide-main">
+    <section class="scroll-slide" id="tab-about">
+      <h3>Let me introduce myself</h3>
+      <h1 class="title">ABOUT ME</h1>
+      <div class="item">
+        <div class="about-me-text">
+          <p class="about-text">
+            Hello! I'm Joseph, I'm a software developer with 2+ years of
+            experience in web development and app development. My specialties
+            include designing and developing creative and innovative solutions
+            using cutting-edge technologies. I have a passion for creating
+            solutions that provide an intuitive and user-friendly experience
+            for end-users.
+          </p>
+          <br />
+          <p class="about-text">
+            My experience includes using a variety of programming languages
+            and frameworks including Java, JavaScript and
+            HTML/CSS.<!--  I have also contributed to projects using databases such as MySQL, PostgreSQL, and MongoDB.-->
+          </p>
+          <br />
+          <p class="about-text">
+            I'm always looking for new opportunities to use my skills to
+            create solutions that make a difference. If you are looking for a
+            software developer with a passion for creating innovative
+            solutions, please don't hesitate to contact me.
+          </p>
+        </div>
+        <div class="about-me-img">
+          <img class="about-img" src="./img/about-me.jpg" alt="About Me" />
+        </div>
+      </div>
+    </section>
+    <section class="scroll-slide" id="tab-projects">
+
+      <!-- PC Projects -->
+
+      <div class="content">
+        <div class="list__cards">
+          <button class="list__cards__btn btn btn-left">
+              <img src="./svg/arrow-left-circle.svg" alt="Arrow left" />
+          </button>
+
+          <div class="content__cards">
+            <div class="card card--current">
+              <div class="image--card">
+                <img src="./img/18-02.jpg" alt=""/>
+              </div>
+            </div>
+
+            <div class="card card--second">
+              <div class="image--card">
+                <img src="./img/project-dark-theme.png" alt=""/>
+              </div>
+            </div>
+
+            <div class="card card--third">
+              <div class="image--card">
+                <img src="./img/project-light-theme.png" alt=""/>
+              </div>
+            </div>
+          </div>
+
+          <button class="list__cards__btn btn btn--right">
+              <img src="./svg/arrow-right-circle.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="list__information">
+          <div class="content__information">
+            <div class="info information__current">
+              <h1 class="text text">FlyBot</h1>
+              <h4 class="text source">Discord</h4>
+              <p class="text description">78000+ Users</p>
+            </div>
+
+            <div class="info information__second">
+              <h1 class="text text">Joseph</h1>
+              <h4 class="text source">Portfolio</h4>
+              <p class="text description">Dark Theme</p>
+            </div>
+
+            <div class="info information__third">
+              <h1 class="text text">Joseph</h1>
+              <h4 class="text source">Portfolio</h4>
+              <p class="text description">Light Theme</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__background">
+          <div class="content__background__image image--current"></div>
+          <div class="content__background__image image--second"></div>
+          <div class="content__background__image image--third"></div>
+        </div>
+      </div>
+
+      <div class="loader">
+        <div class="load"></div>
+      </div>
+
+      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+
+      <!-- Phone projects -->
+
+      <div class="contents">
+        <img class="icon avi" src="./img/Flybot.png" alt=""/><br/>
+        <h1 class="bot-name">FlyBot</h1>
+        <br /><br />
+        <a class="btn-project" href="https://discordapp.com/oauth2/authorize?&client_id=736897708295716905&scope=bot"
+          target="_blank"><i class="fab fa-discord"></i> Invite</a>
+        <a class="btn-project" href="https://discord.gg/U4ABZDFpCV" target="_blank"><i class="fab fa-discord"></i>
+          Support</a>
+        <a class="btn-project" href="https://discordbotlist.com/bots/flybot-8165/upvote" target="_blank"><i
+            class="fas fa-vote-yea"></i> Vote</a>
+        <br /><br /><br /><br />
+        <p style="font-size: 12px">
+          <span class="span">Designed <i class="fas fa-heart icon"></i> by: GoTeX#3403</span>
+        </p>
+      </div>
+
+    </section>
+    <section class="scroll-slide" id="tab-skills">
+      <h1 class="title">My Skills</h1>
+      <ol class="skills">
+        <li data-html="★ ★ ★ ★ ✰" class="html-proc">
+          <h3>HTML</h3>
+          <span class="bar"><span class="html"></span></span> <!-- html skill bar 1 -->
+        </li>
+
+        <li data-css="★ ★ ★ ★ ★" class="css-proc">
+          <h3>CSS</h3>
+          <span class="bar"><span class="css"></span></span> <!-- css skill bar 2 -->
+        </li>
+
+        <li data-javascript="★ ★ ★ ✰ ✰" class="javascript-proc">
+          <h3>JAVASCRIPT</h3>
+          <span class="bar"><span class="javascript"></span></span> <!-- JS skill bar 3 -->
+        </li>
+
+        <li data-jquery="★ ✰ ✰ ✰ ✰" class="jquery-proc">
+          <h3>JQUERY</h3>
+          <span class="bar"><span class="jquery"></span></span> <!-- jquery skill bar 4 -->
+        </li>
+      </ol>
+    </section>
+    <section class="scroll-slide" id="tab-contact">
+       <!-- Contact Form -->
+      <div class="main">
+        <div class="contact">
+          <form id="form">
+            <h1 class="header">Contact Me</h1>
+            <fieldset>
+              <label class="fa fa-user" for="name-input" aria-hidden="true"></label><input type="text"
+                placeholder="NAME" id="name-input" />
+            </fieldset>
+            <fieldset>
+              <label class="fa fa-envelope" for="email-input" aria-hidden="true"></label><input type="email"
+                placeholder="EMAIL" id="email-input" />
+            </fieldset>
+            <fieldset>
+              <label class="fa fa-comment" for="message-input" aria-hidden="true"></label><textarea
+                placeholder="MESSAGE" id="message-input"></textarea>
+            </fieldset>
+            <fieldset>
+              <button type="submit" id="btn-submit">Send</button>
+            </fieldset>
+          </form>
+        </div>
+
+
+      <div class="direct-contact-container">
+    
+        <ul class="contact-list">
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Netherlands, Nijmegen</span></i></li>
+          
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">Joseph.ROC@gmail.com</a></span></i></li>
+          
         </ul>
-    </nav>
 
-    <main class="card-container">
-    <!-- here are all the cards -->
-    <div id="cards">
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/Button.html">
-                <div id="preview-position" class="preview-button">
-                    <div class="style-button">Button</div>
-                </div>
-                <h1 class="title">Button & Alert</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/Checkbox.html">
-                <div id="preview-position" class="preview-checkbox">Checkbox
-                <div class="style-checkbox"></div></div>
-                <h1 class="title">Checkbox</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/Video.html">
-                <div class="style-video"> <video width="300" autoplay muted>
-                        <source src="./video/2Pac - Dear Mama.mp4" type="video/mp4">
-                    </video></div>
-                    <h1 class="title">Video (2Pac)</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./Components/HelloWorld.html">
-                <div id="preview-position" class="preview-title">Hello World!</div>
-                <h1 class="title">Title</h1>
-            </a>
-        </div>
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-codepen" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>       
+        </ul>
+        <hr>
+
+      </div>
     </div>
-</main>
-</main>
-</div>
-</body>
+    </section>
+  </main>
 
+
+  <!-- footer -->
+  <div class="footer-container">
+    <div class="footer-col1">
+      <h1 class="footer-col1-title">Joseph <span>Fallouh</span></h1>
+      <p class="footer-col1-text">
+        My name is Joseph, I'm a Software Developer in The Netherlands, Web Developer, Front-end/Back-end Developer.
+      </p>
+    </div>
+
+    <ol class="footer-list-1">
+      <li>
+        <a href="https://github.com/" class="list-1 fa fa-github"> Gitgub</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/" class="list-1 fa fa-twitter"> Twitter</a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/" class="list-1 fa fa-instagram"> Instagram</a>
+      </li>
+    </ol>
+
+    <ul class="footer-list-2">
+      <li class="list-2 fa fa-phone"> Phone: +31 681771242</li>
+      <li class="list-2 fa fa-envelope"> Email: Jozeph.ROC@gmail.com</li>
+      <li class="list-2 fa fa-location-arrow"> Location: Netherlands, Velp</li>
+    </ul>
+  </div>
+  <footer class="copyright">
+    © 2022 - Joseph Fallouh | Designed By Joseph
+  </footer>
+
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+</body>
 </html>

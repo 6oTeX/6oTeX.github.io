@@ -1,0 +1,195 @@
+
+
+h3{
+    margin-bottom: 40px;
+}
+.skills{ /*style the text*/
+	width: 500px;
+	margin: 60px auto;
+	color: #2d2d2d;
+	text-align: center;
+}
+
+.skills li{ /*set margin of li*/
+	margin: 50px 0;
+    list-style-type: none;
+}
+
+.bar{ /*style the bar*/
+	background-color: var(--clr-skills-bar);
+	display: block;
+	height: 5px;
+	border: 0.5px solid var(--clr-skills-border);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px var(--clr-skills-shadow);
+}
+
+.bar span{ /*style the span tag*/
+	height: 50px;
+	float: left;
+	background-color: var(--clr-skills-span);
+    border: none;
+    outline: none;
+}
+
+.html-proc,
+.css-proc,
+.javascript-proc,
+.jquery-proc{
+	position: relative;
+	transition: 1s ease;
+}
+
+.html{ /*set skills and animation of html*/
+	width: 80%;
+	animation: html 2s;
+	position: relative;
+}
+
+.css{ /*set skills and animation of css*/
+	width: 93%;
+	animation: css 2s;
+}
+
+.javascript{ /*set skills and animation of javascript*/
+	width: 50%;
+	animation: javascript 2s;
+}
+
+.jquery{ /*set skills and animation of jquery*/
+	width: 5%;
+	animation: jquery 2s;
+}
+
+
+@keyframes html{ /*animate html skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes css{ /*animate css skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 93%;
+	}
+}
+
+@keyframes javascript{ /*animate javascript skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes jquery{ /*animate jquery skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 5%;
+	}
+}
+
+.html-proc::after{
+	content: '80%';
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	right: -1px;
+	font-weight: bolder;
+}
+
+.css-proc::after{
+	content: '93%';
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	right: -1px;
+	font-weight: bolder;
+}
+
+.javascript-proc::after{
+	content: '50%';
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	right: -1px;
+	font-weight: bolder;
+}
+
+.jquery-proc::after{
+	content: '5%';
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	right: -1px;
+	font-weight: bolder;
+}
+
+.html-proc::before{
+	content: attr(data-html);
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	left: -1px;
+	font-weight: bolder;
+}
+
+.css-proc::before{
+	content: attr(data-css);
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	left: -1px;
+	font-weight: bolder;
+}
+
+.javascript-proc::before{
+	content: attr(data-javascript);
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	left: -1px;
+	font-weight: bolder;
+}
+
+.jquery-proc::before{
+	content: attr(data-jquery);
+	position: absolute;
+	color: var(--clr-text);
+	top: 30px;
+	left: -1px;
+	font-weight: bolder;
+}
+
+
+.html-proc:hover,
+.css-proc:hover,
+.javascript-proc:hover,
+.jquery-proc:hover{
+	transform: scale(1.1);
+}
+
+.skills h1,
+.skills h3{
+	color: var(--clr-text);
+}
+
+@media only screen and (max-width: 550px){
+	.skills{
+		width: 100%;
+	}
+  }

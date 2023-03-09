@@ -1,0 +1,415 @@
+:root{
+
+/*------------------- Light Theme ---------------------*/
+
+ /* Main Root */
+ --light-background-clr: #fff;
+ --light-pages-background-clr: #eee;
+ --light-page-border-clr: rgb(220, 220, 220);
+
+ /* Home Page */
+ --light-hometab-clr: rgb(230, 230, 230);
+ --light-text-clr: #000;
+
+ /* Navigation bar */
+ --light-nav-background-clr: rgba(102, 177, 241, 0.8);
+ --light-nav-hover-text-clr: #fff;
+ --light-slider-clr: #66B1F1;
+
+ /* Footer Page */
+ --light-footer-background-clr: rgba(154, 189, 237, 0.316);
+ --light-footer-shadow-clr: rgb(116, 182, 240);
+ --light-footer-text-clr: rgb(47, 79, 107);
+ --light-span-clr: rgb(151, 208, 255);
+
+ /* About Page */
+ --light-item-border-clr: #2b2b2b;
+ --light-item-a-clr: rgb(0, 128, 239);
+ --light-item-a-hover-clr: rgb(7, 59, 105);
+ --light-cta-back-clr: rgba(102, 176, 241, 0.084);
+
+ /* Contact Page */
+ --light-contact-text-clr: rgb(119, 119, 119);
+ --light-contact-text-hover-clr: #bbb;
+ --light-contact-border-clr: rgba(255,255,255,.6);
+ --light-contact-icon-clr: #fff;
+
+ /* Skills Page */
+ --light-skills-bar-clr: #eee;
+ --light-skills-bar-border-clr: rgba(0, 0, 0, 0.616);
+ --light-skills-bar-shadow-clr: rgba(102, 177, 241, 0.8);
+ --light-skills-bar-span-clr: #2d2d2d;
+
+ /* Scroll Bar*/
+ --light-scroll-background-clr: #F5F5F5;
+ --light-scroll-thumb-background-clr: rgba(102, 177, 241, 0.8);
+
+ /* Background Image */
+ --light-background-img: url(../svg/Simple\ Shiny\ light.svg);
+
+ /*--------------------- Dark Theme ---------------------*/
+
+   /* Main Root */
+   --dark-background-clr: #000;
+   --dark-pages-background-clr: #111111;
+   --dark-pageborder-clr: #232323;
+   
+   /* Home Page */
+   --dark-hometab-clr: #E6E6E6;
+   --dark-text-clr: #fff;
+ 
+   /* Navigation bar */
+   --dark-nav-background-clr: #994f0ed8;
+   --dark-nav-hover-text-clr: #000;
+   --dark-slider-clr: #994e0e;
+ 
+   /* Footer Page */
+   --dark-footer-background-clr: #6542123c;
+   --dark-footer-shadow-clr: #59490f;
+   --dark-footer-text-clr: #d0b094;
+   --dark-span-clr: #a74b00;
+ 
+   /* About Page */
+   --dark-item-border-clr: #d4d4d4;
+   --dark-item-a-clr: #ff7f10;
+   --dark-item-a-hover-clr: #f8c496;
+   --dark-cta-back-clr: #994f0e17;
+ 
+   /* Contact Page */
+   --dark-contact-text-clr: #888888;
+   --dark-contact-text-hover-clr: #444444;
+   --dark-contact-border-clr: rgba(0, 0, 0, 0.6);
+   --dark-contact-icon-clr: #000;
+ 
+   /* Skills Page */
+   --dark-skills-bar-clr: #111111;
+   --dark-skills-bar-border-clr: rgba(255, 255, 255, 0.616);
+   --dark-skills-bar-shadow-clr: #994e0ed8;
+   --dark-skills-bar-span-clr: #d2d2d2;
+ 
+   /* Scroll Bar*/
+   --dark-scroll-background-clr: #0a0a0a;
+   --dark-scroll-thumb-background-clr: #994f0ed8;
+
+   /* Background Image */
+   --dark-background-img: url(../svg/Simple\ Shiny\ dark.svg);
+}
+
+:root{
+
+    /* -------------------- Light Theme -------------------- */
+
+ /* Main Root */
+ --clr-background: var(--light-background-clr); 
+ --clr-page-background: var(--light-pages-background-clr);
+ --clr-page-border: var(--light-page-border-clr);
+
+ /* Home Page */
+ --clr-hometab: var(--light-hometab-clr);
+ --clr-text: var(--light-text-clr);
+
+ /* Navigation bat */
+ --clr-nav-background: var(--light-nav-background-clr);
+ --clr-nav-hover-text: var(--light-nav-hover-text-clr);
+ --clr-nav-slider: var(--light-slider-clr);
+
+ /* Footer Page */
+ --clr-footer-background: var(--light-footer-background-clr);
+ --clr-footer-shadow: var(--light-footer-shadow-clr);
+ --clr-footer-text: var(--light-footer-text-clr);
+ --clr-footer-span: var(--light-span-clr);
+
+ /* About Page */
+ --clr-about-border: var(--light-item-border-clr);
+ --clr-about-a: var(--light-item-a-clr);
+ --clr-about-a-hover: var(--light-item-a-hover-clr);
+ --clr-about-cta: var(--light-cta-back-clr);
+
+ /* Contact Page */
+ --clr-contact-text: var(--light-contact-text-clr);
+ --clr-contact-text-hover: var(--light-contact-text-hover-clr);
+ --clr-contact-border: var(--light-contact-border-clr);
+ --clr-contact-icon: var(--light-contact-icon-clr);
+
+ /* Skills Page */
+ --clr-skills-bar: var(--light-skills-bar-clr);
+ --clr-skills-border: var(--light-skills-bar-border-clr);
+ --clr-skills-shadow: var(--light-skills-bar-shadow-clr);
+ --clr-skills-span: var(--light-skills-bar-span-clr);
+
+ /* Scroll Bar */
+ --clr-scroll-background: var(--light-scroll-background-clr);
+ --clr-scroll-thumb-background: var(--light-scroll-thumb-background-clr);
+
+ /* Background Image */
+ --img-background: var(--light-background-img);
+
+
+    /* -------------------- Dark Theme -------------------- */
+
+   /* Main Root */
+   --clr-background: var(--dark-background-clr); 
+   --clr-page-background: var(--dark-pages-background-clr);
+   --clr-page-border: var(--dark-page-border-clr);
+ 
+   /* Home Page */
+   --clr-hometab: var(--dark-hometab-clr);
+   --clr-text: var(--dark-text-clr);
+ 
+   /* Navigation bat */
+   --clr-nav-background: var(--dark-nav-background-clr);
+   --clr-nav-hover-text: var(--dark-nav-hover-text-clr);
+   --clr-nav-slider: var(--dark-slider-clr);
+ 
+   /* Footer Page */
+   --clr-footer-background: var(--dark-footer-background-clr);
+   --clr-footer-shadow: var(--dark-footer-shadow-clr);
+   --clr-footer-text: var(--dark-footer-text-clr);
+   --clr-footer-span: var(--dark-span-clr);
+ 
+   /* About Page */
+   --clr-about-border: var(--dark-item-border-clr);
+   --clr-about-a: var(--dark-item-a-clr);
+   --clr-about-a-hover: var(--dark-item-a-hover-clr);
+   --clr-about-cta: var(--dark-cta-back-clr);
+ 
+   /* Contact Page */
+   --clr-contact-text: var(--dark-contact-text-clr);
+   --clr-contact-text-hover: var(--dark-contact-text-hover-clr);
+   --clr-contact-border: var(--dark-contact-border-clr);
+   --clr-contact-icon: var(--dark-contact-icon-clr);
+ 
+   /* Skills Page */
+   --clr-skills-bar: var(--dark-skills-bar-clr);
+   --clr-skills-border: var(--dark-skills-bar-border-clr);
+   --clr-skills-shadow: var(--dark-skills-bar-shadow-clr);
+   --clr-skills-span: var(--dark-skills-bar-span-clr);
+ 
+   /* Scroll Bar */
+   --clr-scroll-background: var(--dark-scroll-background-clr);
+   --clr-scroll-thumb-background: var(--dark-scroll-thumb-background-clr);
+   
+    /* Background Image */
+   --img-background: var(--dark-background-img);
+}
+
+@media (prefers-color-scheme: light) {
+ :root {
+ /* Main Root */
+ --clr-background: var(--light-background-clr); 
+ --clr-page-background: var(--light-pages-background-clr);
+ --clr-page-border: var(--light-page-border-clr);
+
+ /* Home Page */
+ --clr-hometab: var(--light-hometab-clr);
+ --clr-text: var(--light-text-clr);
+
+ /* Navigation bat */
+ --clr-nav-background: var(--light-nav-background-clr);
+ --clr-nav-hover-text: var(--light-nav-hover-text-clr);
+ --clr-nav-slider: var(--light-slider-clr);
+
+ /* Footer Page */
+ --clr-footer-background: var(--light-footer-background-clr);
+ --clr-footer-shadow: var(--light-footer-shadow-clr);
+ --clr-footer-text: var(--light-footer-text-clr);
+ --clr-footer-span: var(--light-span-clr);
+
+ /* About Page */
+ --clr-about-border: var(--light-item-border-clr);
+ --clr-about-a: var(--light-item-a-clr);
+ --clr-about-a-hover: var(--light-item-a-hover-clr);
+ --clr-about-cta: var(--light-cta-back-clr);
+
+ /* Contact Page */
+ --clr-contact-text: var(--light-contact-text-clr);
+ --clr-contact-text-hover: var(--light-contact-text-hover-clr);
+ --clr-contact-border: var(--light-contact-border-clr);
+ --clr-contact-icon: var(--light-contact-icon-clr);
+
+ /* Skills Page */
+ --clr-skills-bar: var(--light-skills-bar-clr);
+ --clr-skills-border: var(--light-skills-bar-border-clr);
+ --clr-skills-shadow: var(--light-skills-bar-shadow-clr);
+ --clr-skills-span: var(--light-skills-bar-span-clr);
+
+ /* Scroll Bar */
+ --clr-scroll-background: var(--light-scroll-background-clr);
+ --clr-scroll-thumb-background: var(--light-scroll-thumb-background-clr);
+
+ /* Background Image */
+ --img-background: var(--light-background-img);
+ }
+}
+.light-theme {
+ /* Main Root */
+ --clr-background: var(--light-background-clr); 
+ --clr-page-background: var(--light-pages-background-clr);
+ --clr-page-border: var(--light-page-border-clr);
+
+ /* Home Page */
+ --clr-hometab: var(--light-hometab-clr);
+ --clr-text: var(--light-text-clr);
+
+ /* Navigation bat */
+ --clr-nav-background: var(--light-nav-background-clr);
+ --clr-nav-hover-text: var(--light-nav-hover-text-clr);
+ --clr-nav-slider: var(--light-slider-clr);
+
+ /* Footer Page */
+ --clr-footer-background: var(--light-footer-background-clr);
+ --clr-footer-shadow: var(--light-footer-shadow-clr);
+ --clr-footer-text: var(--light-footer-text-clr);
+ --clr-footer-span: var(--light-span-clr);
+
+ /* About Page */
+ --clr-about-border: var(--light-item-border-clr);
+ --clr-about-a: var(--light-item-a-clr);
+ --clr-about-a-hover: var(--light-item-a-hover-clr);
+ --clr-about-cta: var(--light-cta-back-clr);
+
+ /* Contact Page */
+ --clr-contact-text: var(--light-contact-text-clr);
+ --clr-contact-text-hover: var(--light-contact-text-hover-clr);
+ --clr-contact-border: var(--light-contact-border-clr);
+ --clr-contact-icon: var(--light-contact-icon-clr);
+
+ /* Skills Page */
+ --clr-skills-bar: var(--light-skills-bar-clr);
+ --clr-skills-border: var(--light-skills-bar-border-clr);
+ --clr-skills-shadow: var(--light-skills-bar-shadow-clr);
+ --clr-skills-span: var(--light-skills-bar-span-clr);
+
+ /* Scroll Bar */
+ --clr-scroll-background: var(--light-scroll-background-clr);
+ --clr-scroll-thumb-background: var(--light-scroll-thumb-background-clr);
+
+ /* Background Image */
+ --img-background: var(--light-background-img);
+}
+
+.dark-theme {
+   /* Main Root */
+   --clr-background: var(--dark-background-clr); 
+   --clr-page-background: var(--dark-pages-background-clr);
+   --clr-page-border: var(--dark-page-border-clr);
+ 
+   /* Home Page */
+   --clr-hometab: var(--dark-hometab-clr);
+   --clr-text: var(--dark-text-clr);
+ 
+   /* Navigation bat */
+   --clr-nav-background: var(--dark-nav-background-clr);
+   --clr-nav-hover-text: var(--dark-nav-hover-text-clr);
+   --clr-nav-slider: var(--dark-slider-clr);
+ 
+   /* Footer Page */
+   --clr-footer-background: var(--dark-footer-background-clr);
+   --clr-footer-shadow: var(--dark-footer-shadow-clr);
+   --clr-footer-text: var(--dark-footer-text-clr);
+   --clr-footer-span: var(--dark-span-clr);
+ 
+   /* About Page */
+   --clr-about-border: var(--dark-item-border-clr);
+   --clr-about-a: var(--dark-item-a-clr);
+   --clr-about-a-hover: var(--dark-item-a-hover-clr);
+   --clr-about-cta: var(--dark-cta-back-clr);
+ 
+   /* Contact Page */
+   --clr-contact-text: var(--dark-contact-text-clr);
+   --clr-contact-text-hover: var(--dark-contact-text-hover-clr);
+   --clr-contact-border: var(--dark-contact-border-clr);
+   --clr-contact-icon: var(--dark-contact-icon-clr);
+ 
+   /* Skills Page */
+   --clr-skills-bar: var(--dark-skills-bar-clr);
+   --clr-skills-border: var(--dark-skills-bar-border-clr);
+   --clr-skills-shadow: var(--dark-skills-bar-shadow-clr);
+   --clr-skills-span: var(--dark-skills-bar-span-clr);
+ 
+   /* Scroll Bar */
+   --clr-scroll-background: var(--dark-scroll-background-clr);
+   --clr-scroll-thumb-background: var(--dark-scroll-thumb-background-clr);
+
+   /* Background Image */
+   --img-background: var(--dark-background-img);
+}
+
+.switch {
+   position: fixed;
+   top: 2%;
+   right: 10px;
+   display: inline-block;
+   width: 30px;
+   height: 20px;
+}
+
+ .switch--top{
+  animation: theme-top 2s ease forwards;
+}
+
+@keyframes theme-top {
+ 0%{
+   top: 95%;
+ }
+ 100%{
+   top: 2%;
+ }
+}
+
+ .switch--bottom{
+  animation: theme-bottom 2s ease forwards;
+ }
+
+ @keyframes theme-bottom {
+  0%{
+    top: 5%;
+  }
+  100%{
+    top: 95%;
+  }
+}
+ 
+ .switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+ }
+ 
+ .slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--clr-text);
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+ }
+ 
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 15.5px;
+   width: 15px;
+   left: 2.5px;
+   bottom: 2px;
+   background-color: rgba(102, 177, 241, 0.8);
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+ }
+ 
+ input:checked + .slider:before {
+   transform: translateX(10.5px);
+   box-shadow: inset -14px 0 0 4px #994e0e;
+   outline: none;
+ }
+ 
+ .slider.round {
+   border-radius: 34px;
+ }
+ 
+ .slider.round:before {
+   border-radius: 50%;
+ }

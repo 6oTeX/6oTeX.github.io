@@ -1,254 +1,614 @@
-html{
-    height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color: rgba(237, 240, 241, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-#main {
-    /* the css code for the main class which's the header */
-    display: grid;
-    height: 120px;
-    background-color: rgba(48, 61, 78, 255);
-    z-index: 99;
+  font-family: "Century Gothic", "Lato", sans-serif;
+  cursor: url(../cursor.cur), auto;
+  background: var(--clr-background);
+  max-width: 100%;
+  background: linear-gradient(115deg, var(--clr-nav-background) 50%, var(--clr-page-background) 50%);
 }
 
-.head {
-    top: 0;
-    left: 500px;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    cursor: default;
+a{
+  text-decoration: none;
 }
+
+/* Start Pages */
+
+.scroll-tabs,
+.scroll-slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  padding: 0 2em;
+}
+/* Hide NavigationBar on phones */
+
+@media (max-width: 666px) {
+  .scroll-tabs{
+    height: 100vh;
+  }
+  .scroll-slide{
+    height: 100vh;
+  }
+}
+
+
+/* End Pages */
+
+/* Start Nav */
 
 .nav-container {
-    display: flex;
-    height: 100%;
-    flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: var(--clr-background);
+  z-index: 10;
 }
 
-.nav-container #navbar {
-    max-width: 175px; 
+.nav-container--top {
+  position: fixed;
+  top: 0;
+  height: 70px;
 }
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
+.nav-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: var(--clr-text);
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+  height: 70px;
 }
 
-#navbar {
-    /* the css code for the navbar which contains everything for the navbar color position size */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(56, 72, 92, 255);
-    padding: 10px;
-    color: rgba(184, 189, 197, 255);
-    z-index: 99;
-    color: white;
+.nav-tab:hover {
+  color: var(--clr-nav-hover-text);
+  background: var(--clr-nav-background);
+  font-weight: 600;
 }
 
-/* #navbar:hover .list-categories {
-    display: block;
-    max-height: inherit;
-    opacity: 1;
-    list-style-type: decimal;
-} 
+.nav-theme-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: var(--clr-text);
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+  height: 70px;
+}
 
-.list-categories {
-    display: block;
-    padding: 10px;
-    margin: 0px;
-    max-height: 0px;
+.nav-theme-btn:hover {
+  color: var(--clr-nav-hover-text);
+  background: var(--clr-nav-background);
+  font-weight: 600;
+}
+
+/* Hide NavigationBar on phones */
+
+@media (max-width: 666px) {
+  .nav-container{
+    display: none;
+  }
+}
+
+/* End Nav */
+
+/* Start Phone Nav */
+
+.phone-nav-container {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: var(--clr-background);
+  z-index: 10;
+}
+
+.phone-nav-container--top{
+    position: fixed;
+    top: 0;
+    height: 70px;
+}
+
+.navigation__list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.navigation__item {
+  perspective: 100px;
+}
+.navigation__link {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 3.4rem;
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+.navigation__link::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 15px;
+  background-color: var(--clr-nav-background);
+  position: absolute;
+  transform: translateY(60px) scale(0.4);
+  transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99);
+  opacity: 0;
+}
+.navigation__icon {
+  align-content: center;
+  width: 26px;
+  transition: all 0.35s ease;
+  will-change: opacity, transform, background-color;
+}
+.navigation__text {
+  position: absolute;
+  transform: translateY(60px) skewY(-20deg);
+  transform-origin: left bottom;
+  color: var(--clr-text);
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.35s ease;
+  will-change: opacity, transform, background-color;
+}
+.navigation__link.active .navigation__icon {
+  transform: translateY(-60px) rotateX(90deg) scale(0.4) skewY(-30deg);
+  opacity: 0;
+}
+.navigation__link.active .navigation__text {
+  opacity: 1;
+  transform: translateY(-3px) skewY(0deg);
+}
+.navigation__link.active::before {
+  transform: translateY(12px) scale(1);
+  transition: all 0.35s cubic-bezier(0, 0.51, 0, 0.99) 0.2s;
+  opacity: 1;
+}
+@keyframes dotAnime {
+  0% {
+    transform: translateY(60px) scale(0.4);
     opacity: 0;
-    overflow: hidden;
-    transition: opacity 800ms ease;
-}  */
-
-#navbar li {
-    /* this's the css for the dots behind the words in the navbar */
-    list-style: disc;
-    position: relative;
-    right: 15px;
-    padding: 10px;
-    margin: 0;
+ }
+  75% {
+    transform: translateY(-3px) scale(1);
+    opacity: 1;
+ }
+  to {
+    transform: translateY(12px);
+    opacity: 1;
+ }
+}
+@keyframes textAnime {
+  from {
+    transform-origin: right center;
+    transform: skewY(0) translateY(0);
+ }
+  25% {
+    transform: skewY(0) translateY(0);
+ }
+  60% {
+    transform: skewY(-12deg) translateY(-22px);
+ }
+  to {
+    transform: skewY(0) translateY(-3px);
+ }
 }
 
-#navbar:hover li {
-    color: white;
-}
-
-#navbar a {
-    /* this's the css for all the anchors which contains the font size text decoration and color */
-    text-decoration: none;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgba(184, 189, 197, 255);
-}
-
-#navbar a:hover {
-    /* this's the anchor hover which makes the anchors in the navbar glow and turn white when you hover over them */
-    color: white;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
-    }
-
-    to {
-        text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff;
-    }
-}
-
-#navbar a.active {
-    /* this makes the anchor color white once selected */
-    color: white;
-}
-
-#cards {
+@media only screen and (max-width: 666px){
+  .phone-nav-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  }
+  
 }
 
-#cards a {
-    /* Because i made all the cards anchors this css let's me remove the underline and change the color of the anchor */
-    text-decoration: none;
-    color: black;
+@media only screen and (max-width: 555px){
+  .navigation__link{
+    padding: 0px 2.7rem;
+  }
 }
 
-#preview-position {
-    position: relative;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 300px;
-    height: 75px;
-    padding-top: 75px;
-    background-color: #f4f4f4;
+@media only screen and (max-width: 460px){
+  .navigation__link{
+    padding: 0px 2rem;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  .navigation__link{
+    padding: 0px 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 280px){
+  .navigation__link{
+    padding: 0px 0.9rem;
+  }
+}
+
+/* Start Fonts */
+
+.scroll-tabs h1,
+.scroll-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+
+.scroll-tabs h3,
+.scroll-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+/* End Fonts */
+
+/* Start Main page */
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#front-page {
+  position: absolute;
+  bottom: 60px;
+  background-image: var(--img-background);
+  width: 100%;
+  z-index: 1;
+}
+
+
+#front-page .front-page {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+
+#front-page h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1s;
+}
+
+#front-page h1:nth-child(1) {
+  animation-delay: 1s;
+}
+
+#front-page h1:nth-child(2) {
+  animation-delay: 2s;
+}
+
+#front-page h1:nth-child(3) {
+  animation: text_reveal_name .5s ease forwards;
+  animation-delay: 3s;
+}
+
+#front-page h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--clr-nav-background);
+  animation: text_reveal_box 1s ease;
+  animation-delay: .5s;
+}
+
+#front-page h1:nth-child(1) span {
+  animation-delay: .5s;
+}
+
+#front-page h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+
+#front-page h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+#front-page .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: var(--clr-nav-background);
+  background-color: var(--clr-about-cta);
+  border: 2px solid var(--clr-nav-background);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .5s ease-out;
+  transition-property: background-color, color;
+}
+
+#front-page .cta:hover {
+  color: var(--clr-nav-hover-text);
+  background-color: var(--clr-nav-background);
+  border: 2px solid var(--clr-nav-hover-text);
+}
+
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: var(--clr-nav-hover-text);
+  }
+}
+
+@keyframes text_reveal_name {
+  100% {
+    color: var(--clr-footer-span);
+    font-weight: 100px;
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  #front-page h1 {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    line-height: 2;
+  }
+
+  #front-page h1 span{
+    margin-top: 10px;
+    height: 55%;
+  }
+
+  #front-page .cta{
+    font-size: 1rem;
+  }
+
+  .container{
+    align-items: flex-start;
+    padding-top: 7rem!important;
+  }
+}
+
+/* End Main Page */
+
+/* Start About me Page */
+
+.item {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  border: 2px solid var(--clr-about-border);
+  padding: 3rem;
+  width: 80%;
+  height: 460px;
+  border-radius: 8px;
+}
+
+.item p {
+  letter-spacing: 3px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.item a {
+  color: var(--clr-about-a);
+  transition: 0.5s ease-in;
+}
+
+.item a:hover {
+  font-size: 1.2rem;
+  color: var(--clr-about-a-hover);
+}
+
+.about-me-text {
+  width: 100%;
+  height: 100%;
+  padding-right: 3rem;
+  color: var(--clr-text);
+  overflow: scroll;
+}
+
+.about-me-img{
+  width: 30%;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  float: right;
 }
 
 .title {
-    /* this's the postion of the titles in all the cards */
-    display: block;
-    text-align: center;
-    border-radius: 20px;
+  margin-bottom: 2rem !important;
+  color: var(--clr-text);
 }
 
-.card {
-    /* this's the first card which's the hello world card */
-    display: flex;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px #888888;
-    transition: all .2s ease-in-out;
-    width: 300px;
-    height: 235px;
-    margin: 15px;
+#tab-about h3{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
-.preview-title {
-    /* this's the preview of the card color font size and font family */
-    color: green;
-    text-align: center;
-    font-size: 35px;
+.scroll-slide#tab-about{
+  justify-content: start;
 }
 
-.preview-button {
-    color: white;
-    text-align: center;
-    font-size: 50px;
+@media only screen and (max-width: 666px) {
+  .item{
+    width: 110%;
+    height: 70%;
+    padding: 2rem;
+  }
+  .item p{
+    font-size: 1rem;
+  }
+
+  .about-me-text{
+    padding-right: 0;
+  }
+
+  .about-me-img,
+  .about-img{
+    display: none;
+  }
+  .scroll-slide#tab-about{
+    justify-content: start;
+  }
+  #tab-about h3{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 }
 
-.style-button {
-    position: absolute;
-    left: 65px;
-    top: 60px;
-    background-color: rgb(19, 97, 161);
-    width: 175px;
-    height: 40px;
-    border-radius: 15px;
-    font-size: 35px;
+@media only screen and (max-width: 350px) {
+  .item{
+    height: 55%;
+  }
 }
 
-.preview-checkbox {
-    color: black;
-    text-align: center;
-    font-size: 20px;
+/* End About me Page */
+
+/* Start Footer */
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin-top: 1em;
+  margin-left: 2em;
 }
 
-.style-checkbox {
-    background-color: white;
-    width: 18px;
-    height: 18px;
-    border-style: groove;
-    border-radius: 1px;
-    font-size: 35px;
+.footer-col1 {
+  max-width: 450px;
 }
 
-.style-video {
-    border-radius: 50px;
+.footer-col1-title {
+  color: var(--clr-footer-text);
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.preview-loading {
-    color: white;
-    text-align: center;
-    font-size: 50px;
+.footer-col1-text{
+  color: var(--clr-footer-text);
 }
 
-.style-loading {
-    position: absolute;
-    left: 65px;
-    top: 60px;
-    background-color: rgb(19, 97, 161);
-    width: 175px;
-    height: 40px;
-    border-radius: 15px;
-    font-size: 35px;
+.copyright {
+  text-align: center;
+  padding: 0.25rem;
 }
 
-.card:hover {
-    /* this makes the card grow a bit bigger once hovered over */
-    transform: scale(1.1);
+.footer-list-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
 }
 
-.go-back-btn {
-    /* here's the css code for the go back button that let's me go back once in history once pressed and it contains the size color postion and everything else */
-    width: 75px;
-    height: auto;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    background-color: transparent;
-
+.footer-list-1 a {
+  list-style-type: none;
+  padding: 1em;
+  letter-spacing: 1px;
+  width: auto;
 }
 
-.go-back-btn:hover {
-    /* this also makes the gb button grow a lil bit once hovered over */
-    transform: scale(1.1);
+.footer-container li{
+  list-style-type: none;
 }
 
-.go-back-img {
-    /* the go back button width and height of the image */
-    width: 75px;
-    height: auto;
+.list-2.fa:hover:hover,
+.footer-list-1 a:hover {
+  transform: scale(1.1);
+  background: var(--clr-footer-span);
+  cursor: pointer;
+}
+
+.list-1 {
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 2px;
+  box-shadow: 3px 2px var(--clr-footer-shadow);
+  border-radius: 100%;
+}
+
+.list-2 {
+  font-size: 30px;
+  width: 280px;
+  text-align: center;
+  text-decoration: none;
+  margin: 18px 2px;
+  box-shadow: 3px 2px var(--clr-footer-shadow);
+  border-radius: 100px;
+}
+
+.list-1.fa-github,
+.list-1.fa-twitter,
+.list-1.fa-instagram {
+  background: var(--clr-footer-background);
+  color: var(--clr-footer-text);
+  transition: 0.5s ease;
+}
+
+.footer-list-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.footer-list-2 li {
+  list-style-type: none;
+  padding: 1em;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.list-2.fa-phone,
+.list-2.fa-location-arrow,
+.list-2.fa-envelope {
+  background: var(--clr-footer-background);
+  color: var(--clr-footer-text);
+  transition: 0.5s ease;
+}
+
+.footer-col1-title span {
+  color: var(--clr-footer-span);
 }
