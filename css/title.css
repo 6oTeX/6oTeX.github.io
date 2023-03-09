@@ -1,0 +1,20 @@
+.hello-world-msg {
+    position: absolute;
+    bottom: 250px;
+    left: 400px;
+    text-align: center;
+    color: green;
+    font-size: 50px;
+}
+
+#navbar {
+    /* the css code for the navbar which contains everything for the navbar color position size */
+    display: flex;
+    flex-direction: column;
+    height: 100%;   
+    background-color: rgba(56, 72, 92, 255);
+    padding: 10px;
+    color: rgba(184, 189, 197, 255);
+    z-index: 99;
+    color: white;
+}

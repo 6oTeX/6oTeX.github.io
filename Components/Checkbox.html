@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkbox.css">
+</head>
+
+<body>
+    <div class="container">
+    <!-- here's all the main stuff like the header the go back button and the navbar  -->
+    <div id="main">
+        <h1 class="head">Components</h1>
+    </div>
+    <main class="nav-container">
+    <nav id="navbar">
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="./HelloWorld.html">Title</a></li>
+        <li><a href="./Button.html">Button & Alert</a></li>
+        <li><a class="active" href="./Checkbox.html">Checkbox</a></li>
+        <li><a href="./Video.html">Video (2Pac)</a></li>
+        <li><a href="">Coming soon...</a></li>
+        <li><a href="">Coming soon...</a></li>
+        <li><a href="">Coming soon...</a></li>
+    </nav>
+
+    <div class="checkbox">
+        <!-- here's the checkbox first line is telling the program that this code type is a checkbox and giving it a name -->
+        <input type="checkbox" name="checkbox">
+        <label for="checkbox"> Check my box</label><br>
+        <!-- here i'm giving the checkbox some text to set it near the checkbox -->
+        <form onclick="alert('Thank for Checking my box')">
+            <!-- here's the same thing as the button once the checkbox is checked and you hit submit you get an alert -->
+            <input type="submit" value="Submit"> <!-- this's the submit button -->
+        </form>
+    </div>
+</main>
+</div>
+</body>
+
+</html>
