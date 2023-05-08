@@ -452,10 +452,11 @@ a{
 }
 
 .about-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  float: right;
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    float: right;
+    overflow: hidden;
 }
 
 .title {
